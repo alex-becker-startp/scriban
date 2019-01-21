@@ -836,6 +836,7 @@ namespace Scriban.Parsing
                         break;
                     }
                     // & is an invalid char alone
+                    NextChar();
                     _token = new Token(TokenType.Invalid, start, start);
                     break;
                 case '?':
@@ -920,6 +921,7 @@ namespace Scriban.Parsing
                         ReadHtmlToken();
                         break;
                     }
+                    NextChar();
                     _token = new Token(TokenType.CompareLess, start, start);
                     break;
                 case '>':
